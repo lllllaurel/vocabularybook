@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{%block title%}Mainpage{%endblock%}
+{%block content%}
+<form action="/record/" method="POST">
+{% csrf_token %}
+
+<span>请输入单词</span><input type="text" name="en-words">
+<span>请输入解释</span><input type="text" name="ch-words">
+<input type="submit" name="submit">
+<button>继续添加</button>
+
+</form>
+{% for field in form %}  
+  <div class="fieldWrapper">  
+      {{ field.errors }}  
+      {{ field.label_tag }} {{ field }}  
+  </div>  
+{% endfor %}
+
+{%endblock%}

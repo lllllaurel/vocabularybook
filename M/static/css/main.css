@@ -1,0 +1,125 @@
+.content-holder {
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1300px;
+}
+.ch-left {
+	background-image: url(../image/record-l.jpg);
+	box-shadow: 10px 10px 10px #888888;
+	border-radius: 5px;
+	height: 400px;
+	width: 600px;
+	float: left;
+}
+.ch-right {
+	background-image: url(../image/record-r.jpg);
+	box-shadow: 10px 10px 10px #888888;
+	border-radius: 5px;
+	height: 400px;
+	margin-left: 20px;
+	width: 600px;
+	float: left;
+}
+.form-group>input{
+	height: 80px;
+	font-size: 2em;
+	margin:270px 30px auto auto;
+	width: 300px;
+}
+.button-holder {
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	text-align: right;
+	width: 1100px;
+}
+#footer {
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 50px;
+	color: #696969;
+}
+#blackboard {
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1300px;
+}
+.ex-left {
+	background-image: url(../image/ex-l.jpg);
+	box-shadow: 10px 10px 10px #888888;
+	border-radius: 5px;
+	height: 400px;
+	width: 600px;
+	float: left;
+}
+.ex-right {
+	background-image: url(../image/ex-r.jpg);
+	box-shadow: 10px 10px 10px #888888;
+	border-radius: 5px;
+	height: 400px;
+	margin-left: 20px;
+	width: 600px;
+	float: left;
+}
+#bb-show {
+	height: 80px;
+	font-size: 2em;
+	margin:270px 30px auto auto;
+	width: 300px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:3em;
+	color: white;
+	text-align: center;
+}
+.body-content {
+	min-height: 300px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ab-container {
+	margin-left: auto;
+	margin-right:auto;
+	width: 1200px;
+	height: 700px;
+}
+.ab-left {
+	width: 400px;
+	height: 700px;
+	float: left;
+}
+.ab-right {
+	width: 700px;
+	height: 700px;
+	float: left;
+}
+.card {
+	margin-top: 100px;
+}
+.login-container{
+	width: 700px;
+	height: 400px;
+	margin:100px auto auto auto;
+	text-align: center;
+}
+.p-container{
+	width: 1200px;
+	min-height: 500px;
+	margin:100px auto auto auto;
+	text-align: center;
+}
+.p-table{
+	width: 1200px;
+	height: auto;
+	text-align: center;
+	overflow: auto;
+}
+.p-table > table{
+	text-align: left;
+	font-size: 1.2em;
+}

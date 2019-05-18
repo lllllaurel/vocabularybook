@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+{%block title%}Dictionary{%endblock%}
+{%block content%}
+{% csrf_token %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{targetword}}</h1>
+    <p class="lead">{{translation}}.</p>
+  </div>
+</div>
+
+<div id="footer">
+	Copyright2018 Kang Jian.All Rights Reserved
+</div>
+<script type="text/javascript" src="/static/js/main.js"></script>
+{%endblock%}

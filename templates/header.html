@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">AlienDove</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">单词录入 </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/exam/">听写本 </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/print/">查阅单词本 </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bugs/">BUG反馈 </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/">关于 </a>
+      </li>
+      {% if needlogin %}
+  		<li class="nav-item">
+  			<a class="nav-link" href="/login/">登录 </a>
+  		</li>
+  		<li class="nav-item">
+  			<a class="nav-link" href="/regist/">注册 </a>
+  		</li>
+      {% else %}
+  		<li class="nav-item">
+  			<a class="nav-link" href="/logout/">注销 </a>
+  		</li>
+	    {% endif %}
+    </ul>
+    <form class="form-inline" action="/trans/" method="GET">
+      <input class="form-control mr-sm-2" type="search" placeholder="Online Dictionary" name="target" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Look Up</button>
+    </form>
+  </div>
+</nav>
+<script type="text/javascript">
+  $('.btn-outline-light').click(function(){
+    var words = $('input[name="target"]').val()
+    if (words.indexOf(' ')>0) {
+      alert('目前词典功能尚不支持短语和句子！');
+      return false;
+    }
+  })
+</script>

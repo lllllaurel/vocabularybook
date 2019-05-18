@@ -1,0 +1,51 @@
+{% extends 'basic.html' %}
+{%block title%}Mainpage{%endblock%}
+{%block content%}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Word Manual</h1>
+    <p class="lead">在本页记录您收录的单词，请根据提示在左侧输入英文单词，在右侧输入中文解释.</p>
+  </div>
+</div>
+
+<div class="content-holder">
+	<form action="/record/" method="POST">
+	{% csrf_token %}
+	<div class="ch-left">
+		<div class="form-group">
+			<input type="text" name="enwords" class="form-control" id="inputWords" placeholder="Enter words">
+		</div>
+	</div>
+	<div class="ch-right">
+		<div class="form-group">
+			<input type="text" class="form-control" name="chwords" id="inputTranslation" placeholder="Enter Translation">
+		</div>
+	</div>
+</div>
+<div class="button-holder">
+	<div style="height:100px;width:100px;float: right;"><button type="submit" class="btn btn-primary btn-lg" id="submitwords">提交</button></div>
+	<div style="color: red;height: 100px;width: 100px;float: right;"><span>{{recordResult}}</span></div>
+	</form>
+</div>
+<div id="footer">
+	Copyright2018 Kang Jian.All Rights Reserved
+</div>
+<script type="text/javascript">
+	$('#inputWords').blur(function(){
+		var words = $(this).val()
+		var Regx = /^[A-Za-z]*$/;
+		if (!Regx.test(words)) {
+			alert('目前仅支持纯英文单词！');
+			return false;
+		}
+	})
+	$('#submitwords').click(function(){
+		var words = $('#inputTranslation').val()
+		if (words.indexOf('/')>0) {
+			alert('不可以包含特殊字符！');
+			return false;
+		}
+	})
+</script>
+{%endblock%}

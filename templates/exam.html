@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+{%block title%}Exam{%endblock%}
+{%block content%}
+{% csrf_token %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Word Exam</h1>
+    <p class="lead">请根据左侧出现的中文解释，在右侧填写正确的单词.</p>
+  </div>
+</div>
+
+<div class="content-holder">
+	{% csrf_token %}
+	<div class="ex-left"><div id="bb-show"></div></div>
+	<div class="ex-right" id="bb-record">
+		<div class="form-group">
+			<input type="text" class="form-control" name="en-input" placeholder="Enter Words">
+		</div>
+	</div>
+</div>
+<div class="button-holder">
+	<div style="height:100px;width:100px;float: right;"><button type="submit" class="btn btn-primary btn-lg">下一个</button></div>
+	<div id="reminder" style="color: red;height: 100px;width: 100px;float: right;"></div>
+</div>
+<div id="footer">
+	Copyright2018 Kang Jian.All Rights Reserved
+</div>
+<script type="text/javascript" src="/static/js/main.js"></script>
+{%endblock%}
